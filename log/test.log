@@ -1,0 +1,91 @@
+  [1m[35m (0.6ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[35m
+	BEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: 
+{
+    "user"[0;37m => [0m{
+                         "name"[0;37m => [0m[0;33m"ユーザー1"[0m,
+                     "password"[0;37m => [0m[0;33m"[FILTERED]"[0m,
+        "password_confirmation"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    }
+}
+  [1m[35m (0.4ms)[0m  [1m[35m
+	SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34m
+	SELECT
+		1 AS one
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = BINARY 'ユーザー1' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://localhost
+Completed 302 Found in 474ms (ActiveRecord: 4.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35m
+	BEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: 
+{
+    "user"[0;37m => [0m{
+                         "name"[0;37m => [0m[0;33m"ユーザー1"[0m,
+                     "password"[0;37m => [0m[0;33m"[FILTERED]"[0m,
+        "password_confirmation"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    }
+}
+  [1m[35m (0.4ms)[0m  [1m[35m
+	SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34m
+	SELECT
+		1 AS one
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = BINARY 'ユーザー1' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://localhost
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35m
+	BEGIN[0m
+Processing by UsersController#create as HTML
+  Parameters: 
+{
+    "user"[0;37m => [0m{
+                         "name"[0;37m => [0m[0;33m"ユーザー1"[0m,
+                     "password"[0;37m => [0m[0;33m"[FILTERED]"[0m,
+        "password_confirmation"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    }
+}
+  [1m[35m (0.4ms)[0m  [1m[35m
+	SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34m
+	SELECT
+		1 AS one
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = BINARY 'ユーザー1' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://localhost
+Completed 302 Found in 18ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31m
+	ROLLBACK[0m

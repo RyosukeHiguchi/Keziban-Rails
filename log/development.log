@@ -1,0 +1,1960 @@
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:41:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 1 LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (14.2ms)
+  Rendered home/index.html.erb within layouts/application (40.7ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 9328ms (Views: 9194.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-07-31 14:41:47 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 1 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.5ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 455ms (Views: 363.1ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/logout" for 172.21.0.1 at 2019-07-31 14:41:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YJeMFzCYlau5HP6fpmlatCUI3EuXaizi3cvwITagiM+TWIfNZVpZ/Pwp+LsHctPxhqGv72TOi/ZR0PzyWv/rAw=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:41:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.6ms)
+  Rendered home/index.html.erb within layouts/application (23.5ms)
+  Rendered application/_header.html.erb (2.7ms)
+Completed 200 OK in 572ms (Views: 549.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-07-31 14:41:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (2.9ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (1.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (1.4ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (649.1ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 1238ms (Views: 1151.2ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:42:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.4ms)
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 358ms (Views: 341.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2019-07-31 14:42:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/_form.html.erb (18.3ms)
+  Rendered users/new.html.erb within layouts/application (43.4ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 458ms (Views: 387.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:42:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (16.1ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 343ms (Views: 328.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:42:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.2ms)
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+  Rendered application/_header.html.erb (2.7ms)
+Completed 200 OK in 385ms (Views: 369.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2019-07-31 14:42:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form.html.erb (17.9ms)
+  Rendered users/new.html.erb within layouts/application (36.4ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 482ms (Views: 407.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:42:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.3ms)
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 442ms (Views: 425.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-07-31 14:42:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (223.2ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 740ms (Views: 686.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/boards/new" for 172.21.0.1 at 2019-07-31 14:42:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#new as HTML
+  Rendering boards/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  Rendered boards/_form.html.erb (278.5ms)
+  Rendered boards/new.html.erb within layouts/application (298.5ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 852ms (Views: 776.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-07-31 14:42:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (215.7ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 664ms (Views: 587.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/boards/2" for 172.21.0.1 at 2019-07-31 14:43:01 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 2 LIMIT 1[0m
+  Rendering boards/show.html.erb within layouts/application
+  [1m[36mTag Load (1.0ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags` INNER JOIN `board_tag_relations`
+			ON `tags`.`id` = `board_tag_relations`.`tag_id`
+	WHERE
+		`board_tag_relations`.`board_id` = 2[0m
+  Rendered boards/_board.html.erb (109.3ms)
+  [1m[36mComment Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`comments`. *
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 2[0m
+  Rendered collection of comments/_comment.html.erb [1 times] (1.6ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered comments/_form.html.erb (32.8ms)
+  Rendered boards/show.html.erb within layouts/application (235.4ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 741ms (Views: 597.0ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-07-31 14:43:15 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (266.0ms)
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:43:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 1029ms (Views: 957.4ms | ActiveRecord: 6.9ms)
+
+
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.7ms)
+  Rendered home/index.html.erb within layouts/application (22.7ms)
+  Rendered application/_header.html.erb (2.7ms)
+Completed 200 OK in 483ms (Views: 465.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:43:18 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (16.8ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 277ms (Views: 262.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-07-31 14:43:20 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (200.3ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 661ms (Views: 602.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:43:23 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.4ms)
+  Rendered home/index.html.erb within layouts/application (20.8ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 492ms (Views: 472.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 172.21.0.1 at 2019-07-31 14:43:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"Djh4I+2oehGFUGhTtl3c4cxrOGaA0rg2/i9RcG7JawcBh3SfKl4g0ajC5aF/8PJ0fWrCvh1GGQiNpnH0vAh8Sg=="[0m,
+               "session"[0;37m => [0m{
+            "name"[0;37m => [0m[0;33m"user1"[0m,
+        "password"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    },
+                "commit"[0;37m => [0m[0;33m"ログイン"[0m
+}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = 'user1' LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.7ms)
+  Rendered home/index.html.erb within layouts/application (29.7ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 745ms (Views: 411.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2019-07-31 14:43:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/_form.html.erb (19.6ms)
+  Rendered users/new.html.erb within layouts/application (39.3ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 508ms (Views: 430.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-07-31 14:43:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (20.7ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 380ms (Views: 361.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 04:00:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.0ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.2ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (40.7ms)
+  Rendered home/index.html.erb within layouts/application (80.8ms)
+  Rendered application/_header.html.erb (2.1ms)
+Completed 200 OK in 1833ms (Views: 1798.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 06:35:16 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.1ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (20.3ms)
+  Rendered home/index.html.erb within layouts/application (44.5ms)
+  Rendered application/_header.html.erb (1.9ms)
+Completed 200 OK in 2209ms (Views: 2186.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2019-08-01 06:35:23 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/_form.html.erb (16.0ms)
+  Rendered users/new.html.erb within layouts/application (29.2ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 459ms (Views: 358.7ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users" for 172.21.0.1 at 2019-08-01 06:35:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"P4y2DAbRTzLdOku/p6lF0k5SMq8gu/9ZyLcu6OlprLCz6GhJ6LuUbXjB8vSkhw0NruFQ0yw/OOhzprUamUlhnQ=="[0m,
+                  "user"[0;37m => [0m{
+                         "name"[0;37m => [0m[0;33m"user1"[0m,
+                     "password"[0;37m => [0m[0;33m"[FILTERED]"[0m,
+        "password_confirmation"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    },
+                "commit"[0;37m => [0m[0;33m"作成"[0m
+}
+  [1m[35m (0.4ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34m
+	SELECT
+		1 AS one
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = BINARY 'user1' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[31m
+	ROLLBACK[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 891ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/new" for 172.21.0.1 at 2019-08-01 06:35:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form.html.erb (14.7ms)
+  Rendered users/new.html.erb within layouts/application (28.0ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 358ms (Views: 294.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 172.21.0.1 at 2019-08-01 06:36:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"/eHBZKRbVZnkPPWeCBTqtNfzZrGpN3E2aTuATZqMg+EOLsq+8ZmZzqEJ87qpD2PxdFoVFVqT1iLlIIye9tPgLQ=="[0m,
+                  "user"[0;37m => [0m{
+                         "name"[0;37m => [0m[0;33m"user"[0m,
+                     "password"[0;37m => [0m[0;33m"[FILTERED]"[0m,
+        "password_confirmation"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    },
+                "commit"[0;37m => [0m[0;33m"作成"[0m
+}
+  [1m[35m (0.3ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34m
+	SELECT
+		1 AS one
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = BINARY 'user' LIMIT 1[0m
+  [1m[36mUser Create (1.6ms)[0m  [1m[32m
+	INSERT
+	INTO
+		`users` (
+			`name`
+			,`password_digest`
+			,`created_at`
+			,`updated_at`
+		)
+	VALUES (
+		'user'
+		,'$2a$12$FadW3lJGayoKxVjqWfH8iuDLQeYeGsxq8zAiafxphr4l0JD9TPozC'
+		,'2019-08-01 06:36:24'
+		,'2019-08-01 06:36:24'
+	)[0m
+  [1m[35m (2.8ms)[0m  [1m[35m
+	COMMIT[0m
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 376ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:24 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (1.6ms)
+  Rendered application/_header.html.erb (1.5ms)
+Completed 200 OK in 414ms (Views: 308.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:33 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.9ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 417ms (Views: 335.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:38 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.9ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 508ms (Views: 426.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.8ms)
+  Rendered application/_header.html.erb (1.6ms)
+Completed 200 OK in 530ms (Views: 431.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.9ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 467ms (Views: 357.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 06:36:47 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.4ms)
+  Rendered home/index.html.erb within layouts/application (14.1ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 309ms (Views: 247.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:36:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (2.9ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (2.9ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (1.3ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (210.0ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 713ms (Views: 592.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:36:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.5ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 370ms (Views: 299.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 06:36:57 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+  Rendered application/_header.html.erb (2.6ms)
+Completed 200 OK in 429ms (Views: 354.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/login" for 172.21.0.1 at 2019-08-01 06:37:05 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"R3ai/nAGTwBdWMIa1ok63gXzqhRJa7yjnQ/tDfAfJR5Iya5Ct/AVwHDKT+gfJBRLtPJQzNT/HZ3uhs2JIt4yUw=="[0m,
+               "session"[0;37m => [0m{
+            "name"[0;37m => [0m[0;33m"user"[0m,
+        "password"[0;37m => [0m[0;33m"[FILTERED]"[0m
+    },
+                "commit"[0;37m => [0m[0;33m"ログイン"[0m
+}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`name` = 'user' LIMIT 1[0m
+Redirected to http://localhost:3000/mypage
+Completed 302 Found in 320ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 06:37:06 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.6ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 373ms (Views: 298.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:37:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (176.4ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 539ms (Views: 447.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/boards/new" for 172.21.0.1 at 2019-08-01 06:37:17 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  Rendered boards/_form.html.erb (275.3ms)
+  Rendered boards/new.html.erb within layouts/application (291.9ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 686ms (Views: 576.0ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/boards" for 172.21.0.1 at 2019-08-01 06:38:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"T0aJ1rFASPeFkhFMSEzhE/EX0Tu76Q37H/Y9SF9aNA8ps3zEiu/4VEXE6J2fJKauQCHtcPfM7tFfVL1NJcq0lA=="[0m,
+                 "board"[0;37m => [0m{
+           "name"[0;37m => [0m[0;33m"new_1"[0m,
+          "title"[0;37m => [0m[0;33m"No-1"[0m,
+           "body"[0;37m => [0m[0;33m"This is the first voting !!"[0m,
+        "tag_ids"[0;37m => [0m[
+            [1;37m[0] [0m[0;33m""[0m,
+            [1;37m[1] [0m[0;33m"1"[0m,
+            [1;37m[2] [0m[0;33m"3"[0m
+        ]
+    },
+                "commit"[0;37m => [0m[0;33m"保存"[0m
+}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mTag Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`
+	WHERE
+		`tags`.`id` IN (
+			1
+			,3
+		)[0m
+  [1m[35m (0.4ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mBoard Create (0.6ms)[0m  [1m[32m
+	INSERT
+	INTO
+		`boards` (
+			`name`
+			,`title`
+			,`body`
+			,`created_at`
+			,`updated_at`
+		)
+	VALUES (
+		'new_1'
+		,'No-1'
+		,'This is the first voting !!'
+		,'2019-08-01 06:38:19'
+		,'2019-08-01 06:38:19'
+	)[0m
+  [1m[36mBoardTagRelation Create (0.8ms)[0m  [1m[32m
+	INSERT
+	INTO
+		`board_tag_relations` (
+			`board_id`
+			,`tag_id`
+			,`created_at`
+			,`updated_at`
+		)
+	VALUES (
+		104
+		,1
+		,'2019-08-01 06:38:19'
+		,'2019-08-01 06:38:19'
+	)[0m
+  [1m[36mBoardTagRelation Create (1.7ms)[0m  [1m[32m
+	INSERT
+	INTO
+		`board_tag_relations` (
+			`board_id`
+			,`tag_id`
+			,`created_at`
+			,`updated_at`
+		)
+	VALUES (
+		104
+		,3
+		,'2019-08-01 06:38:19'
+		,'2019-08-01 06:38:19'
+	)[0m
+  [1m[35m (2.2ms)[0m  [1m[35m
+	COMMIT[0m
+Redirected to http://localhost:3000/boards/104
+Completed 302 Found in 355ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/boards/104" for 172.21.0.1 at 2019-08-01 06:38:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 104 LIMIT 1[0m
+  Rendering boards/show.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags` INNER JOIN `board_tag_relations`
+			ON `tags`.`id` = `board_tag_relations`.`tag_id`
+	WHERE
+		`board_tag_relations`.`board_id` = 104[0m
+  Rendered boards/_board.html.erb (124.1ms)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`comments`. *
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 104[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered comments/_form.html.erb (27.7ms)
+  Rendered boards/show.html.erb within layouts/application (235.8ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 788ms (Views: 572.2ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/comments" for 172.21.0.1 at 2019-08-01 06:39:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CommentsController#create as HTML
+  Parameters: 
+{
+                  "utf8"[0;37m => [0m[0;33m"✓"[0m,
+    "authenticity_token"[0;37m => [0m[0;33m"1Y2KcXxg2D5iicJBG091y05UcX6Fz6Kf+AIDQXkuB0kmQoGrKaIUaSe8xGW6VPyO7f0C2nZrBYt0GQ+SFXFkhQ=="[0m,
+               "comment"[0;37m => [0m{
+        "board_id"[0;37m => [0m[0;33m"104"[0m,
+            "name"[0;37m => [0m[0;33m"日本太郎"[0m,
+         "comment"[0;37m => [0m[0;33m"アイウエオ"[0m
+    },
+                "commit"[0;37m => [0m[0;33m"送信"[0m
+}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mBoard Load (1.0ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 104 LIMIT 1[0m
+  [1m[36mComment Create (0.4ms)[0m  [1m[32m
+	INSERT
+	INTO
+		`comments` (
+			`board_id`
+			,`name`
+			,`comment`
+			,`created_at`
+			,`updated_at`
+		)
+	VALUES (
+		104
+		,'日本太郎'
+		,'アイウエオ'
+		,'2019-08-01 06:39:14'
+		,'2019-08-01 06:39:14'
+	)[0m
+  [1m[35m (2.8ms)[0m  [1m[35m
+	COMMIT[0m
+Redirected to http://localhost:3000/boards/104
+Completed 302 Found in 204ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/boards/104" for 172.21.0.1 at 2019-08-01 06:39:14 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 104 LIMIT 1[0m
+  Rendering boards/show.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags` INNER JOIN `board_tag_relations`
+			ON `tags`.`id` = `board_tag_relations`.`tag_id`
+	WHERE
+		`board_tag_relations`.`board_id` = 104[0m
+  Rendered boards/_board.html.erb (126.3ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`comments`. *
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 104[0m
+  Rendered collection of comments/_comment.html.erb [1 times] (13.8ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered comments/_form.html.erb (19.2ms)
+  Rendered boards/show.html.erb within layouts/application (252.9ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 1064ms (Views: 848.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/boards/104/edit" for 172.21.0.1 at 2019-08-01 06:39:28 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#edit as HTML
+  Parameters: {"id"=>"104"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 104 LIMIT 1[0m
+  Rendering boards/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`.`id`
+	FROM
+		`tags` INNER JOIN `board_tag_relations`
+			ON `tags`.`id` = `board_tag_relations`.`tag_id`
+	WHERE
+		`board_tag_relations`.`board_id` = 104[0m
+  Rendered boards/_form.html.erb (111.9ms)
+  Rendered boards/edit.html.erb within layouts/application (128.6ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 629ms (Views: 478.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:39:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (176.7ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 630ms (Views: 534.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 06:39:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (162.0ms)
+  Rendered application/_header.html.erb (0.9ms)
+Completed 200 OK in 597ms (Views: 489.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/boards/new" for 172.21.0.1 at 2019-08-01 06:39:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  Rendered boards/_form.html.erb (93.2ms)
+  Rendered boards/new.html.erb within layouts/application (109.7ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 575ms (Views: 448.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:39:55 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (178.9ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 616ms (Views: 513.5ms | ActiveRecord: 7.0ms)
+
+
+Started DELETE "/boards/2" for 172.21.0.1 at 2019-08-01 06:39:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#destroy as HTML
+  Parameters: 
+{
+    "authenticity_token"[0;37m => [0m[0;33m"axEbdmfWiK9DI1ILu4nCoaCMwqM24LzwQNWg08Pf6u6Y3hCsMhRE+AYWVC8akkvkAyWxB8VEG+TMzqwAr4CJIg=="[0m,
+                    "id"[0;37m => [0m[0;33m"2"[0m
+}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mComment Destroy (0.8ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 2[0m
+  [1m[36mBoardTagRelation Destroy (0.4ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`board_tag_relations`
+	WHERE
+		`board_tag_relations`.`board_id` = 2[0m
+  [1m[36mBoard Destroy (1.1ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 2[0m
+  [1m[35m (3.2ms)[0m  [1m[35m
+	COMMIT[0m
+Redirected to http://localhost:3000/boards
+Completed 302 Found in 236ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:39:58 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.9ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (194.6ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 659ms (Views: 547.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 06:40:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (158.7ms)
+  Rendered application/_header.html.erb (1.9ms)
+Completed 200 OK in 669ms (Views: 558.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:40:23 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (194.3ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 648ms (Views: 523.0ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 06:40:31 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (184.8ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 581ms (Views: 474.3ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 06:40:51 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (159.3ms)
+  Rendered application/_header.html.erb (1.0ms)
+Completed 200 OK in 629ms (Views: 536.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 08:24:13 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (1.5ms)
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 560ms (Views: 473.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 08:32:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (200.8ms)
+  Rendered application/_header.html.erb (1.6ms)
+Completed 200 OK in 658ms (Views: 549.6ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 08:32:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (169.6ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 615ms (Views: 514.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/boards?page=11" for 172.21.0.1 at 2019-08-01 09:30:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+Processing by BoardsController#index as HTML
+  Parameters: {"page"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 100[0m
+  Rendered boards/index.html.erb within layouts/application (261.4ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 798ms (Views: 687.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 09:30:30 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.9ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 454ms (Views: 375.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:11:19 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.8ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (1.4ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (1.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (1.3ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (837.0ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 2900ms (Views: 2707.9ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 13:11:26 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.7ms)
+  Rendered application/_header.html.erb (1.6ms)
+Completed 200 OK in 581ms (Views: 451.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:11:29 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (216.1ms)
+  Rendered application/_header.html.erb (1.2ms)
+Completed 200 OK in 692ms (Views: 554.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/boards/3" for 172.21.0.1 at 2019-08-01 13:11:35 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 3 LIMIT 1[0m
+  Rendering boards/show.html.erb within layouts/application
+  [1m[36mTag Load (1.4ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags` INNER JOIN `board_tag_relations`
+			ON `tags`.`id` = `board_tag_relations`.`tag_id`
+	WHERE
+		`board_tag_relations`.`board_id` = 3[0m
+  Rendered boards/_board.html.erb (163.6ms)
+  [1m[36mComment Load (1.5ms)[0m  [1m[34m
+	SELECT
+		`comments`. *
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 3[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered comments/_form.html.erb (44.3ms)
+  Rendered boards/show.html.erb within layouts/application (265.5ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 802ms (Views: 586.2ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:11:39 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (235.2ms)
+  Rendered application/_header.html.erb (1.4ms)
+Completed 200 OK in 706ms (Views: 588.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:20:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by BoardsController#index as HTML
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:18:in `<class:User>'
+app/models/user.rb:17:in `<top (required)>'
+app/controllers/application_controller.rb:9:in `current_user'
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:20:57 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:18:in `<class:User>'
+app/models/user.rb:17:in `<top (required)>'
+app/controllers/application_controller.rb:9:in `current_user'
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:21:08 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:18:in `<class:User>'
+app/models/user.rb:17:in `<top (required)>'
+app/controllers/application_controller.rb:9:in `current_user'
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:21:11 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:18:in `<class:User>'
+app/models/user.rb:17:in `<top (required)>'
+app/controllers/application_controller.rb:9:in `current_user'
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:24:32 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		`schema_migrations`.`version`
+	FROM
+		`schema_migrations`
+	ORDER BY
+		`schema_migrations`.`version` ASC[0m
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (1.1ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (1.3ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (630.7ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 6327ms (Views: 6148.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/mypage" for 172.21.0.1 at 2019-08-01 13:24:43 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering users/me.html.erb within layouts/application
+  Rendered users/me.html.erb within layouts/application (0.5ms)
+  Rendered application/_header.html.erb (1.9ms)
+Completed 200 OK in 523ms (Views: 416.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:24:45 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (198.3ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 610ms (Views: 495.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 172.21.0.1 at 2019-08-01 13:24:47 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered users/_login_form.html.erb (12.8ms)
+  Rendered home/index.html.erb within layouts/application (29.8ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 451ms (Views: 355.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:24:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (178.4ms)
+  Rendered application/_header.html.erb (1.1ms)
+Completed 200 OK in 668ms (Views: 549.6ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/boards/3" for 172.21.0.1 at 2019-08-01 13:24:52 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#destroy as HTML
+  Parameters: 
+{
+    "authenticity_token"[0;37m => [0m[0;33m"lrxlbb4Ms5OFsTNHI5azHOfErmq9nc+/oFIL4O9fovllc263685/xMCENWOCjTpZRG3dzk45aKssSQczgwDBNQ=="[0m,
+                    "id"[0;37m => [0m[0;33m"3"[0m
+}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35m
+	BEGIN[0m
+  [1m[36mComment Destroy (0.8ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`comments`
+	WHERE
+		`comments`.`board_id` = 3[0m
+  [1m[36mBoardTagRelation Destroy (0.7ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`board_tag_relations`
+	WHERE
+		`board_tag_relations`.`board_id` = 3[0m
+  [1m[36mBoard Destroy (0.7ms)[0m  [1m[31m
+	DELETE
+	FROM
+		`boards`
+	WHERE
+		`boards`.`id` = 3[0m
+  [1m[35m (3.7ms)[0m  [1m[35m
+	COMMIT[0m
+Redirected to http://localhost:3000/boards
+Completed 302 Found in 250ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/boards" for 172.21.0.1 at 2019-08-01 13:24:53 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BoardsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`users`. *
+	FROM
+		`users`
+	WHERE
+		`users`.`id` = 2 LIMIT 1[0m
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mTag Load (0.7ms)[0m  [1m[34m
+	SELECT
+		`tags`. *
+	FROM
+		`tags`[0m
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34m
+	SELECT
+		`boards`. *
+	FROM
+		`boards` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  [1m[34m
+	SELECT
+		COUNT( * )
+	FROM
+		`boards`[0m
+  Rendered boards/index.html.erb within layouts/application (229.1ms)
+  Rendered application/_header.html.erb (1.3ms)
+Completed 200 OK in 801ms (Views: 688.5ms | ActiveRecord: 8.5ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[35m
+	CREATE
+	DATABASE `app_development` DEFAULT CHARACTER
+SET
+	`utf8`[0m
+  [1m[35m (0.5ms)[0m  [1m[35m
+	SET
+NAMES utf8
+,@@SESSION.sql_mode = CONCAT( CONCAT( @@sql_mode ,',STRICT_ALL_TABLES' ) ,',NO_AUTO_VALUE_ON_ZERO' )
+,@@SESSION.sql_auto_is_null = 0
+,@@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[35m
+	CREATE
+	DATABASE `app_test` DEFAULT CHARACTER
+SET
+	`utf8`[0m
